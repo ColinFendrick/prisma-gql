@@ -7,11 +7,19 @@ var models = [
   {
     name: "Post",
     embedded: false
+  },
+  {
+    name: "Course",
+    embedded: false
+  },
+  {
+    name: "User",
+    embedded: false
   }
 ];
 exports.Prisma = prisma_lib_1.makePrismaClientClass({
   typeDefs,
   models,
-  endpoint: `https://us1.prisma.sh/colin-fendrick/graphql-server/dev`
+  endpoint: `${process.env["PRISMA_ENDPOINT"]}`
 });
 exports.prisma = new exports.Prisma();

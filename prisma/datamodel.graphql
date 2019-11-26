@@ -4,3 +4,16 @@ type Post {
   title: String!
   content: String!
 }
+
+type Course {
+  id: ID! @id
+  published: Boolean! @default(value: false)
+  name: String!
+  description: String!
+}
+
+type User {
+  id: ID! @id
+  name: String!
+  email: String!
+}
