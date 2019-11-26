@@ -12,6 +12,6 @@ var models = [
 exports.Prisma = prisma_lib_1.makePrismaClientClass({
   typeDefs,
   models,
-  endpoint: `https://us1.prisma.sh/colin-fendrick/gql-server/dev`
+  endpoint: `https://us1.prisma.sh/colin-fendrick/graphql-server/dev`
 });
 exports.prisma = new exports.Prisma();
